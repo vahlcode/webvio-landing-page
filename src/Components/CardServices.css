@@ -1,0 +1,47 @@
+section.card-services {
+    padding: 195px 20px 335px 20px;
+    font-family: "Poppins";
+}
+
+section.card-services>.entry-title {
+    width: 100%;
+    padding: 50px 0 0 0;
+}
+
+section.card-services>.entry-title>h1 {
+    color: #4D533C;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 65px;
+}
+
+section.card-services>.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media only screen and (min-width: 961px) {
+    section.card-services {
+        padding: 195px 165px 335px 165px;
+        font-family: "Poppins";
+    }
+    
+    section.card-services>.entry-title {
+        width: 70%;
+        padding: 195px 0 0 0;
+    }
+    
+    section.card-services>.entry-title>h1 {
+        color: #4D533C;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 65px;
+    }
+    
+    section.card-services>.cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+}

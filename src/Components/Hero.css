@@ -1,0 +1,97 @@
+section.hero {
+    padding: 100px 20px 200px 20px;
+    background: url("../Assets/Images/Hero.png");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #ffffff;
+    margin-bottom: -60px;
+}
+
+section.hero>.row {
+    display: flex;
+    align-items: center;
+}
+
+section.hero>.row>.text {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+section.hero h1 {
+    font-family: "Poppins";
+    font-size: 34px;
+    line-height: 44px;
+    margin: 25px 0;
+}
+
+section.hero h5 {
+    font-family: "Poppins";
+    font-size: 18px;
+    line-height: 21px;
+}
+
+section.hero p {
+    font-family: "Poppins";
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 25px;
+}
+
+section.hero button {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    background: none;
+    border: none;
+    color: #ffd723;
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 961px) {
+    section.hero {
+        padding: 195px 165px 235px 165px;
+        background: url("../Assets/Images/Hero.png");
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        color: #ffffff;
+        margin-bottom: -60px;
+    }
+    section.hero>.row {
+        display: flex;
+        align-items: center;
+    }
+    section.hero>.row>.text {
+        flex-basis: 60%;
+        max-width: 60%;
+    }
+    section.hero h1 {
+        font-family: "Poppins";
+        font-size: 60px;
+        line-height: 74px;
+        margin: 25px 0;
+    }
+    section.hero h5 {
+        font-family: "Poppins";
+        font-size: 14px;
+        line-height: 21px;
+    }
+    section.hero p {
+        font-family: "Poppins";
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 25px;
+    }
+    section.hero button {
+        font-family: "Poppins";
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 26px;
+        background: none;
+        border: none;
+        color: #ffd723;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,154 @@
+section.services {
+    padding: 100px 20px 100px 20px;
+    font-family: "Poppins";
+}
+
+section.services .brands {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 50px 50px 100px #00000027;
+    padding: 55px 20px 55px 20px;
+    margin-top: -195px;
+    margin-right: 0;
+}
+
+section.services .brands .logo {
+    flex-basis: 40%;
+    max-width: 40%;
+}
+
+section.services>.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section.services>.row>.left-text {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 165px 20px 0 20px;
+}
+
+section.services h1 {
+    color: #4D533C;
+    font-family: "Poppins";
+    font-size: 34px;
+    line-height: 44px;
+    margin: 25px 0;
+}
+
+section.services h5 {
+    color: #4D533C;
+    font-family: "Poppins";
+    font-size: 18px;
+    line-height: 21px;
+}
+
+section.services p {
+    color: #213842;
+    font-family: "Poppins";
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 25px;
+}
+
+section.services button {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    background: none;
+    border: none;
+    color: #D4D6D4;
+    text-decoration: underline;
+}
+
+section.services>.row>.ceo-comment {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 20px 30px 58px 30px;
+    box-shadow: 0 100px 100px #00000027;
+    margin-top: 50px;
+}
+
+section.services .comment {
+    color: #4D533C;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 40px;
+}
+
+@media only screen and (min-width: 961px) {
+    section.services {
+        padding: 195px 165px 150px 165px;
+        font-family: "Poppins";
+    }
+    section.services .brands {
+        background: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 50px 50px 100px #00000027;
+        padding: 55px 165px 55px 65px;
+        margin-top: -195px;
+        margin-right: -165px;
+    }
+    section.services .brands .logo {
+        flex-basis: 20%;
+        max-width: 20%;
+    }
+    section.services>.row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    section.services>.row>.left-text {
+        flex-basis: 50%;
+        max-width: 50%;
+        padding: 165px 120px 0 0;
+    }
+    section.services h1 {
+        color: #4D533C;
+        font-family: "Poppins";
+        font-size: 36px;
+        line-height: 46px;
+        margin: 25px 0;
+    }
+    section.services h5 {
+        color: #4D533C;
+        font-family: "Poppins";
+        font-size: 14px;
+        line-height: 21px;
+    }
+    section.services p {
+        color: #213842;
+        font-family: "Poppins";
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 25px;
+    }
+    section.services button {
+        font-family: "Poppins";
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 26px;
+        background: none;
+        border: none;
+        color: #D4D6D4;
+        text-decoration: underline;
+    }
+    section.services>.row>.ceo-comment {
+        flex-basis: 45%;
+        max-width: 45%;
+        padding: 165px 30px 58px 30px;
+        box-shadow: 0 100px 100px #00000027;
+    }
+    section.services .comment {
+        color: #4D533C;
+        font-size: 24px;
+        font-style: italic;
+        line-height: 40px;
+    }
+}

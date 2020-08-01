@@ -1,0 +1,49 @@
+.user{
+    display: flex;
+    align-items: center;
+}
+
+.user>img{
+    margin-right: 20px;
+    box-shadow: 20px 25px 43px #0000001f;
+    border-radius: 50%;
+    max-width: 30%;
+}
+
+.user .username{
+    color: #4D533C;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.user .user-position{
+    color: #152934;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 961px) {
+    .user{
+        display: flex;
+        align-items: center;
+    }
+    
+    .user>img{
+        margin-right: 30px;
+        box-shadow: 20px 25px 43px #0000001f;
+        border-radius: 50%;
+        max-width: auto;
+    }
+    
+    .user .username{
+        color: #4D533C;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+    
+    .user .user-position{
+        color: #152934;
+        font-size: 16px;
+    }
+}

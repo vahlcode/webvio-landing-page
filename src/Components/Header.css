@@ -1,0 +1,95 @@
+header {
+    padding: 20px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .5s;
+    z-index: 100;
+}
+
+header>.row {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    flex-basis: 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header .logo img {
+    width: 90%;
+}
+
+header .menu {
+    flex-basis: 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .menu>button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F5F6F7;
+}
+
+header .menu>button>span {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+@media only screen and (min-width: 961px) {
+    header {
+        padding: 20px 165px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: .5s;
+        z-index: 100;
+    }
+    header>.row {
+        display: flex;
+        align-items: center;
+    }
+    header .logo {
+        flex-basis: 50%;
+        max-width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    header .logo img {
+        width: auto;
+    }
+    header .menu {
+        flex-basis: 50%;
+        max-width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    header .menu>button {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #F5F6F7;
+    }
+    header .menu>button>span {
+        font-size: 20px;
+        color: var(--primary-color);
+    }
+}

@@ -1,0 +1,101 @@
+.card {
+    border-radius: 4px;
+    padding: 30px;
+    transition: .5s;
+    height: auto;
+    position: relative;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 50px 50px 100px #00000027;
+}
+
+.card h3 {
+    color: #4D533C;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    margin-bottom: 35px;
+}
+
+.card p {
+    color: #21384288;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+
+.card a {
+    display: inline-block;
+    color: #D4D6D4;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    transition: .5;
+    position: static;
+    bottom: 30px;
+    left: 30px;
+    width: 100%;
+}
+
+.card:hover a {
+    display: inline-block;
+    color: #FFD723;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+@media only screen and (min-width: 961px) {
+    .card {
+        border-radius: 4px;
+        padding: 30px;
+        transition: .5s;
+        height: 339px;
+        position: relative;
+    }
+    
+    .card:hover {
+        cursor: pointer;
+        box-shadow: 50px 50px 100px #00000027;
+    }
+    
+    .card h3 {
+        color: #4D533C;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34px;
+        margin-bottom: 35px;
+    }
+    
+    .card p {
+        color: #21384288;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 26px;
+        margin-bottom: 20px;
+    }
+    
+    .card a {
+        display: inline-block;
+        color: #D4D6D4;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 26px;
+        transition: .5;
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        width: 100%;
+    }
+    
+    .card:hover a {
+        display: inline-block;
+        color: #FFD723;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 26px;
+    }
+}

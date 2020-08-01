@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -1865,3 +1866,6 @@ If you have ideas for more “How To” recipes that should be on this page, [le
 =======
 # webvio-landing-page
 >>>>>>> ddbcb06b98f1002ccd72368bbbd17483707d6c39
+=======
+# webvio-landing-page
+>>>>>>> 5d6a956d46d2bad41e30d552c513aafad5e9babd

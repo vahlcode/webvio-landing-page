@@ -81,6 +81,36 @@ section.drop-down .row>.info>ul>li>a {
     align-items: center;
     justify-content: center;
     margin-right: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+section.drop-down .row>.info>ul>li>a>span {
+    position: absolute;
+    z-index: 1;
+}
+
+section.drop-down .row>.info>ul>li>a:hover>span {
+    color: #ffffff;
+}
+
+section.drop-down .row>.info>ul>li>a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: translateY(120%);
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #FFD723;
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+    z-index: 0;
+}
+
+section.drop-down .row>.info>ul>li>a:hover::after {
+    transform: translateY(0);
+    transform-origin: bottom left;
 }
 
 section.drop-down>.menu>button {
@@ -110,20 +140,6 @@ section.drop-down .info>h1 {
     line-height: 38px;
     margin-bottom: 24px;
     word-wrap: break-word;
-}
-
-section.drop-down .row>.info>ul>li>a:hover {
-    background: #FFD723;
-    height: 33px;
-    width: 33px;
-    border-radius: 50%;
-    color: #ffffff !important;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 12px;
-    position: relative;
 }
 
 section.drop-down .row>.info>ul>li>a>.icon {
@@ -185,6 +201,8 @@ section.drop-down .row>.info>ul>li>a>.icon {
         align-items: center;
         justify-content: center;
         margin-right: 12px;
+        position: relative;
+        overflow: hidden;
     }
     section.drop-down>.menu>button {
         height: 40px;
@@ -210,18 +228,6 @@ section.drop-down .row>.info>ul>li>a>.icon {
         font-weight: 700;
         line-height: 38px;
         margin-bottom: 24px;
-    }
-    section.drop-down .row>.info>ul>li>a:hover {
-        background: #FFD723;
-        height: 33px;
-        width: 33px;
-        border-radius: 50%;
-        color: #ffffff !important;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 12px;
     }
     section.drop-down .row>.info>ul>li>a>.icon {
         margin-right: 0;

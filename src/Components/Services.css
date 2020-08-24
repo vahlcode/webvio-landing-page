@@ -55,7 +55,7 @@ section.services p {
     margin-bottom: 25px;
 }
 
-section.services button {
+section.services a {
     font-family: "Poppins";
     font-size: 16px;
     font-weight: 700;
@@ -63,7 +63,27 @@ section.services button {
     background: none;
     border: none;
     color: #D4D6D4;
-    text-decoration: underline;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+section.services a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFD723;
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+section.services a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 section.services>.row>.ceo-comment {
@@ -129,7 +149,7 @@ section.services .comment {
         line-height: 26px;
         margin-bottom: 25px;
     }
-    section.services button {
+    section.services a {
         font-family: "Poppins";
         font-size: 16px;
         font-weight: 700;
@@ -137,7 +157,7 @@ section.services .comment {
         background: none;
         border: none;
         color: #D4D6D4;
-        text-decoration: underline;
+        text-decoration: none;
     }
     section.services>.row>.ceo-comment {
         flex-basis: 45%;

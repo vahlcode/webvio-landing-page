@@ -21,7 +21,7 @@ const Projects = [
     },
     {
         title: "Is this the future of 3D model?",
-        description: "While it was just a TV show, that little speech at the beginning of the original Star Trek show really did do a good job of capturing our feelings about space. \nIt is those feelings that drive our love of astronomy and our desire to learn more and more about it. ",
+        description: "While it was just a TV show, that little speech at the beginning of the original Star Trek show really did do a good job of capturing our feelings about space. \n\nIt is those feelings that drive our love of astronomy and our desire to learn more and more about it. ",
         link: "#",
         image: Project2,
         ltr: true,
@@ -34,7 +34,7 @@ const Projects = [
     },
     {
         title: " Is this the future of Online Booking",
-        description: "You should be able to find several indispensable facts about motivation in the following paragraphs. \nIf there’s at least one fact you didn’t know before, imagine the difference it might make.",
+        description: "You should be able to find several indispensable facts about motivation in the following paragraphs. \n\nIf there’s at least one fact you didn’t know before, imagine the difference it might make.",
         link: "#",
         image: Project3,
         ltr: false,

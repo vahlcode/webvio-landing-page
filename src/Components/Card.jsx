@@ -14,7 +14,11 @@ class Card extends Component{
     render() {
         return(
             <div className="card">
-                <h3>{this.state.title}</h3>
+                <h3>
+                    <pre>
+                        {this.state.title}
+                    </pre>
+                </h3>
                 <p>{this.state.paragraph}</p>
                 <a href={this.state.link}>Read More</a>
             </div>

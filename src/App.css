@@ -24,6 +24,7 @@
 
 body {
   font-family: "Poppins";
+  overflow-x: hidden;
 }
 
 button {
@@ -45,11 +46,12 @@ img {
 }
 
 .background {
-  background: #4F553D url("./Assets/Images/footer-bg.png");
+  background: #4f553d59;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  backdrop-filter: blur(50px) opacity(0.5);
 }
 
 section .divider {

@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import "./Services.css";
 import UserCard from "./UserCard";
+import {gsap, TweenMax, TimelineLite, Power3} from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 class Services extends Component {
     constructor(props) {
@@ -13,11 +15,41 @@ class Services extends Component {
             ceoComment: props.ceoComment,
             ceoPic: props.ceoPic
         }
+        this.services = React.createRef();
+        this.tl = new TimelineLite({delay: 0.5})
+    }
+
+    componentDidMount() {
+        const services = this.services.current;
+        const brands = services.children[0].querySelectorAll(".logo");
+        const leftText = services.children[1].children[0].querySelectorAll("*");
+        const ceoComment = services.children[1].children[1].querySelectorAll("*");
+        
+        TweenMax.to(services, 0, {css: {visibility: "visible"}});
+
+        const Tl = this.tl;
+
+        // Registering the ScrollTrigger plugin
+        if (typeof window !== "undefined") {
+            gsap.registerPlugin(ScrollTrigger); 
+        }  
+
+        Tl.from(brands, {x: 1000, opacity: 0, ease: Power3.easeOut, stagger: .3})
+            .from(leftText, {x: 1000, opacity: 0, ease: Power3.easeOut, stagger: .3}, .2)
+            .from(ceoComment, {x: 1000, opacity: 0, ease: Power3.easeOut, stagger: .3}, .4)
+
+        // Initializing the ScrollTrigger plugin
+        ScrollTrigger.create({
+            trigger: ".services",
+            animation: Tl,
+            start: "top center",
+            end: "top 100px"
+          })
     }
 
     render() {
         return(
-            <section className="services">
+            <section className="services" ref={this.services}>
                 <div className="brands">
                     {
                     (this.state.logos) ? 
@@ -40,9 +72,9 @@ class Services extends Component {
                         <p>
                             {this.state.paragraph}
                         </p>
-                        <button>
+                        <a href="">
                             Know more about us
-                        </button>
+                        </a>
                     </div>
                     <div className="ceo-comment">
                         <p className="comment">
@@ -50,7 +82,7 @@ class Services extends Component {
                         </p>
                         <UserCard 
                             name="Genevieve Rodriquez" 
-                            position="Founder & CEO, Webovic" 
+                            position="Founder & CEO, Webovio" 
                             pic={this.state.ceoPic}
                             imgHeight="90px"
                             imgWidth="90px"

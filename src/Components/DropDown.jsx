@@ -10,7 +10,7 @@ class DropDown extends Component {
     }
 
     componentWillReceiveProps() {
-        this.setState({...this.state, show: this.props.show})
+        this.setState({...this.state, show: !this.props.show})
     }
 
     render() {

@@ -1,6 +1,14 @@
 import React, {Component} from "react";
 import "./Featured.css";
-import UserCard from "./UserCard";
+import LeftAlignCard from "./Left Align/Card";
+import RightAlignCard from "./Right Align/Card";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+// Registering the ScrollTrigger plugin
+if (typeof window !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger); 
+}
 
 class Featured extends Component {
     constructor(props) {
@@ -10,11 +18,34 @@ class Featured extends Component {
             entryTitle: props.title,
             entryParagraph: props.paragraph
         }
+        this.featured = React.createRef();
+        this.Tl = gsap.timeline( {
+            scrollTrigger: {
+                trigger: ".featured",
+                start: "top center",
+                end: "top 100px"
+            },
+            delay: 0.5});
+    }
+
+    componentDidMount() {
+        const featured = this.featured.current;
+        const entryHeading = featured.querySelector(".entry-contents h1");
+        const entryParagraph = featured.querySelector(".entry-contents p"); 
+
+        console.log(entryHeading);
+
+        gsap.to(featured, 0, {css: {visibility: "visible"}});
+
+        const Tl = this.Tl;
+
+        Tl.from(entryHeading, 1.2, {x: 1200, opacity: 0, ease: "power3.out"})
+        .from(entryParagraph, 1.2, {x: 1200, opacity: 0, ease: "power3.out"}, .2)
     }
 
     render() {
         return(
-            <section className="featured">
+            <section className="featured" ref={this.featured}>
                 <div className="divider">
                     <div className="divider-inner"></div>
                 </div>
@@ -30,62 +61,8 @@ class Featured extends Component {
                     {
                         this.state.featuredProjects.map((project, index) => (
                             (project.ltr) ?
-                            <div className="row" key={index}>
-                                <div className="project-text right">
-                                    <h1>
-                                        {project.title}
-                                    </h1>
-                                    <p>
-                                        {project.description}
-                                    </p>
-                                    <a href={project.link}><span className="icon icon-mooneye"></span> See case study</a>
-                                </div>
-                                <div className="project-image right">
-                                    <img src={project.image} alt=""/>
-                                    <div className="project-comment right">
-                                        <p>
-                                            {project.comment.comment}
-                                        </p>
-                                        <UserCard 
-                                            name={project.comment.clientName}
-                                            position={project.comment.clientPosition}
-                                            pic={project.comment.clientPic}
-                                            imgHeight="46px"
-                                            imgWidth="46px"
-                                            nameSize="16px"
-                                            positionSize="14px"
-                                        />
-                                    </div>
-                                </div>
-                            </div> :
-                            <div className="row" key={index}>
-                            <div className="project-image left">
-                                <img src={project.image} alt=""/>
-                                <div className="project-comment left">
-                                    <p>
-                                        {project.comment.comment}
-                                    </p>
-                                    <UserCard 
-                                        name={project.comment.clientName}
-                                        position={project.comment.clientPosition}
-                                        pic={project.comment.clientPic}
-                                        imgHeight="46px"
-                                        imgWidth="46px"
-                                        nameSize="16px"
-                                        positionSize="14px"
-                                    />
-                                </div>
-                            </div>
-                            <div className="project-text left">
-                                <h1>
-                                    {project.title}
-                                </h1>
-                                <p>
-                                    {project.description}
-                                </p>
-                                <a href={project.link}><span className="icon icon-mooneye"></span> See case study</a>
-                            </div>
-                        </div>
+                            <LeftAlignCard project={project} key={index}/> :
+                            <RightAlignCard project={project} key={index}/>
                         ))
                     }
                 </div>

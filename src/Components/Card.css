@@ -16,7 +16,8 @@
     font-size: 24px;
     font-weight: 500;
     line-height: 34px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+    white-space: pre-wrap;
 }
 
 .card p {
@@ -67,7 +68,8 @@
         font-size: 24px;
         font-weight: 500;
         line-height: 34px;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
+        white-space: pre-wrap;
     }
     
     .card p {

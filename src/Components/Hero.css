@@ -6,6 +6,8 @@ section.hero {
     background-attachment: fixed;
     color: #ffffff;
     margin-bottom: -60px;
+    visibility: hidden;
+    overflow: hidden;
 }
 
 section.hero>.row {
@@ -23,6 +25,7 @@ section.hero h1 {
     font-size: 34px;
     line-height: 44px;
     margin: 25px 0;
+    transform: translateY(0);
 }
 
 section.hero h5 {
@@ -48,6 +51,8 @@ section.hero button {
     color: #ffd723;
     text-decoration: underline;
 }
+
+/* STYLING FOR DESKTOP BEGINS */
 
 @media only screen and (min-width: 961px) {
     section.hero {
@@ -93,5 +98,31 @@ section.hero button {
         border: none;
         color: #ffd723;
         text-decoration: underline;
+    }
+}
+
+/* 
+Animations
+*/
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }

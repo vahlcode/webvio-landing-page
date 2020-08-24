@@ -20,7 +20,7 @@ footer .footer-cta {
 
 footer .footer-cta h1 {
     color: #4D533C;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 44px;
     margin-bottom: 30px;
 }
@@ -29,6 +29,8 @@ footer .footer-cta a {
     color: #D4D6D4;
     font-size: 16px;
     font-weight: 700;
+    display: inline;
+    position: relative;
 }
 
 footer .contact-details {
@@ -90,6 +92,24 @@ footer .lower-contact-details .link>ul>li>a {
     font-size: 16px;
 }
 
+footer .lower-contact-details .link>ul>li>a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFD723;
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+footer .lower-contact-details .link>ul>li>a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 footer .lower-contact-details .info {
     flex-basis: 100%;
     max-width: 100%;
@@ -143,17 +163,22 @@ footer .lower-contact-details .info>ul>li>a {
     margin-right: 12px;
 }
 
-footer .lower-contact-details .info>ul>li>a:hover {
-    background: #FFD723;
-    height: 33px;
-    width: 33px;
-    border-radius: 50%;
-    color: #ffffff !important;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 12px;
+footer .lower-contact-details .info>ul>li>a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: translateY(-100%);
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #FFD723;
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+footer .lower-contact-details .info>ul>li>a:hover::after {
+    transform: translateY(-100%);
+    transform-origin: bottom left;
 }
 
 footer .lower-contact-details .info>ul>li>a>.icon {
@@ -276,12 +301,33 @@ footer .inner-footer .copyright {
     footer .lower-contact-details .link>ul>li>a {
         color: #B6C197;
         font-size: 16px;
+        display: inline-block;
+        position: relative;
+    }
+
+    footer .lower-contact-details .link>ul>li>a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #FFD723;
+        transform-origin: bottom right;
+        transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    footer .lower-contact-details .link>ul>li>a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
     
     footer .lower-contact-details .info {
         flex-basis: 30%;
         max-width: 30%;
         padding-left: 80px;
+        padding-top: 0;
         border-top: none;
         border-left: 1px solid #5D6544;
     }
@@ -329,20 +375,38 @@ footer .inner-footer .copyright {
         align-items: center;
         justify-content: center;
         margin-right: 12px;
+        position: relative;
+        overflow: hidden;
     }
     
-    footer .lower-contact-details .info>ul>li>a:hover {
-        background: #FFD723;
-        height: 33px;
-        width: 33px;
-        border-radius: 50%;
-        color: #ffffff !important;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 12px;
+    footer .lower-contact-details .info>ul>li>a>span {
+        position: absolute;
+        z-index: 1;
     }
+    
+    footer .lower-contact-details .info>ul>li>a:hover>span {
+        color: #ffffff;
+    }
+
+    footer .lower-contact-details .info>ul>li>a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: translateY(120%);
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: #FFD723;
+        transform-origin: bottom right;
+        transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+        z-index: 0;
+    }
+    
+    footer .lower-contact-details .info>ul>li>a:hover::after {
+        transform: translateY(0);
+        transform-origin: bottom left;
+    }
+    
     
     footer .lower-contact-details .info>ul>li>a>.icon {
         margin-right: 0;

@@ -16,7 +16,7 @@ class Services extends Component {
             ceoPic: props.ceoPic
         }
         this.services = React.createRef();
-        this.tl = new TimelineLite({delay: 0.5})
+        this.tl = new TimelineLite()
     }
 
     componentDidMount() {

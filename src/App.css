@@ -70,6 +70,10 @@ a>.icon {
   margin-right: 10px;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 @media only screen and (min-width: 961px) {
   section .divider {
     height: 1px;

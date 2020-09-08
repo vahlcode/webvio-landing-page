@@ -22,10 +22,8 @@ class Featured extends Component {
         this.Tl = gsap.timeline( {
             scrollTrigger: {
                 trigger: ".featured",
-                start: "top center",
-                end: "top 100px"
-            },
-            delay: 0.5});
+                start: "top 50%"
+            }});
     }
 
     componentDidMount() {
@@ -39,8 +37,8 @@ class Featured extends Component {
 
         const Tl = this.Tl;
 
-        Tl.from(entryHeading, 1.2, {x: 1200, opacity: 0, ease: "power3.out"})
-        .from(entryParagraph, 1.2, {x: 1200, opacity: 0, ease: "power3.out"}, .2)
+        Tl.from(entryHeading, 1.2, {x: 100, opacity: 0, ease: "power3.out"})
+        .from(entryParagraph, 1.2, {x: 100, opacity: 0, ease: "power3.out"}, .2)
     }
 
     render() {

@@ -9,7 +9,7 @@
     "react-gsap-enhancer": "^0.3.0"
   },
   "devDependencies": {
-    "react-scripts": "1.0.0"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
